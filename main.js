@@ -1,5 +1,8 @@
-import Stack from "./src/Stack.js";
-import Queue from "./src/Queue.js";
+const Stack = require("./src/Stack.js");
+const Queue = require("./src/Queue.js");
 
-const stack = new Stack();
-const queue = new Queue();
+module.exports = {
+    Stack ,
+    Queue
+}
+

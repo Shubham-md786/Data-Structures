@@ -1,0 +1,23 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "A package which help in storing data",
+  "main": "main.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shubham-md786/Data-Structures.git"
+  },
+  "keywords": [
+    "Data",
+    "Data-Structures"
+  ],
+  "author": "shubham-md786",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shubham-md786/Data-Structures/issues"
+  },
+  "homepage": "https://github.com/Shubham-md786/Data-Structures#readme"
+}

@@ -1,6 +1,15 @@
 class Stack {
-  constructor() {
-    this.items = [];
+  constructor(arr) {
+    if (arr) {
+        if(Array.isArray(arr)) {
+	    this.items = arr;
+        }
+	if(!Array.isArray(arr)) {
+            throw new Error(`Must be in the form of Array or empty`)
+	}
+    } else {
+        this.items = []
+    }
   }
 
   push(element) {
@@ -25,6 +34,10 @@ class Stack {
 
   print() {
     console.log(this.items.toString());
+  }
+  
+  get() {
+    return this.items
   }
 }
 

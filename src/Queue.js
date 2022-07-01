@@ -1,33 +1,50 @@
 class Queue {
   constructor() {
-    this.items = [];
+    this.items = {};
+    this.front = 0;
+    this.rear = 0;
   }
 
+// O(1)
   enqueue(element) {
-    this.items.push(element);
+    // Adding element with rear index in items and increasing rear
+    this.items[this.rear] = element;
+    this.rear++;
   }
 
+// O(1)
   dequeue() {
-    return this.items.shift();
+    const item = this.items[this.front];
+    // Deleting item from object with index front
+    delete this.items[this.front];
+    this.front++;
+    // returning the item value
+    return item;
   }
 
+// O(1)
   peek() {
-    if (!this.isEmpty()) {
-      return this.items[0];
-    }
-    return null;
+    return this.items[this.front];
   }
 
-  isEmpty() {
-    return this.items.length === 0;
-  }
-
+// O(1)
   size() {
-    return this.items.length;
+    return this.rear - this.front;
   }
 
+// O(1)
+  isEmpty() {
+    return this.rear - this.front === 0;
+  }
+
+// O(1)
   print() {
-    console.log(this.items.toString());
+    console.log(this.items);
+  }
+  
+// O(1)
+  get() {
+    return this.items
   }
 }
 
